@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabla de Multiplicar del 3</title>
     <link rel="stylesheet" href="multiplicar.css">
+    <script src="multiplicar.js"></script>
 </head>
 <body>
     <div class="contenedor">
@@ -13,12 +14,12 @@
             <img src="icono.png" alt="Logo DevBylin">
             <h1>Tabla de Multiplicar del 3</h1>
             <p class="subtitle">Aprende y practica la tabla del 3 de forma interactiva</p>
-            <button class="btn-probar">PROBAR</button>
+            <button class="btn-probar" onclick="generarTablas()">PROBAR</button>
         </header>
 
-        <!-- Contenido Principal -->
+<!-- Contenido Principal -->
         <main>
-            <table class="tabla-multiplicar">
+            <table id="contenedorTabla" class="tablaMultiplicar">
                 <thead>
                     <tr>
                         <th>Multiplicando</th>
