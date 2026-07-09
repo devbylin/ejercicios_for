@@ -3,33 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabla de Multiplicar del 3</title>
+    <title>Tabla de Multiplicar Interactiva</title>
     <link rel="stylesheet" href="multiplicar.css">
-    <script src="multiplicar.js"></script>
 </head>
 <body>
     <div class="contenedor">
         <!-- Header -->
         <header>
             <img src="icono.png" alt="Logo DevBylin">
-            <h1>Tabla de Multiplicar del 3</h1>
-            <p class="subtitle">Aprende y practica la tabla del 3 de forma interactiva</p>
-            <div class="botones">
-                <button class="btn-probar" onclick="generarTablas(5)">Tabla del 5</button>
-            </div> 
+            <h1>📐 Tabla de Multiplicar</h1>
+            <p class="subtitle">Aprende y practica las tablas de forma interactiva</p>
         </header>
 
-<!-- Contenido Principal -->
+        <!-- ✅ PASO 1: Instrucciones claras -->
+        <div class="instrucciones">
+            <div class="instruccion-item">
+                <span class="instruccion-icon">1️⃣</span>
+                <span class="instruccion-texto">Escribe un número del <strong>1 al 20</strong> en la caja de texto</span>
+            </div>
+            <div class="instruccion-item">
+                <span class="instruccion-icon">2️⃣</span>
+                <span class="instruccion-texto">Presiona el botón <strong>"Generar"</strong> para ver su tabla</span>
+        </div>
+
+        <!-- ✅ PASO 2: Caja de texto con mensaje de ayuda -->
+        <section class="input-section">
+            <label for="txtNumero" class="input-label">🔢 Ingresa un número:</label>
+            <div class="input-group">
+                <input type="text" id="txtNumero" class="input-caja" placeholder="Ejemplo: 7" autofocus>
+                <button class="btn-generar" onclick="generarTablaPersonalizada()">🚀 Generar</button>
+            </div>
+            <p class="input-ayuda">💡 <span id="mensajeAyuda">Presiona "Generar" para ver la tabla del número ingresado</span></p>
+        </section>
+
+        <!-- Contenido Principal -->
         <main>
             <div id="contenedorTabla">
-            <p class="mensaje inicial">Selecciona una tabla para verla</p>
+                <div class="mensaje-inicial">
+                    <span class="mensaje-icono">👋</span>
+                    <h3>¡Bienvenido!</h3>
+                    <p>Selecciona un número para ver su tabla de multiplicar</p>
+                    <p class="mensaje-ejemplo">Prueba con: <strong>5</strong>, <strong>7</strong> o <strong>9</strong></p>
+                </div>
             </div>
         </main>
 
         <!-- Footer -->
-      <footer>
-    <p>&copy; 2026 DevBylin Solutions. Todos los derechos reservados.</p>
-</footer>
+        <footer>
+            <p>&copy; 2026 DevBylin Solutions. Todos los derechos reservados.</p>
+        </footer>
     </div>
+
+    <script src="multiplicar.js"></script>
 </body>
 </html>

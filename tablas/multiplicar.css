@@ -1,3 +1,6 @@
+/* ============================================
+   RESET Y BASE
+   ============================================ */
 * {
     margin: 0;
     padding: 0;
@@ -16,7 +19,9 @@ body {
     color: #333;
 }
 
-/* Contenedor principal */
+/* ============================================
+   CONTENEDOR PRINCIPAL
+   ============================================ */
 .contenedor {
     background: white;
     max-width: 720px;
@@ -26,13 +31,14 @@ body {
     overflow: hidden;
 }
 
-/* Header con logo */
+/* ============================================
+   HEADER
+   ============================================ */
 header {
     background: linear-gradient(135deg, #df9478, #df9478);
     color: white;
     padding: 25px;
     text-align: center;
-    position: relative;
 }
 
 header img {
@@ -52,7 +58,9 @@ header h1 {
     opacity: 0.95;
 }
 
-/* Botón PROBAR */
+/* ============================================
+   BOTÓN PROBAR
+   ============================================ */
 .btn-probar {
     margin: 20px auto;
     display: block;
@@ -74,23 +82,22 @@ header h1 {
     box-shadow: 0 12px 25px rgba(44, 62, 80, 0.4);
 }
 
-/* Tabla */
+/* ============================================
+   MAIN
+   ============================================ */
 main {
     padding: 35px 30px;
 }
 
 /* ============================================
-   ESTILOS PARA LA TABLA DINÁMICA
+   TABLA DINÁMICA
    ============================================ */
-
 .tablaMultiplicar {
     width: 100%;
     border-collapse: collapse;
-    background: rgba(255, 255, 255, 0.03);
     border-radius: 12px;
     overflow: hidden;
     margin-top: 15px;
-    font-family: 'Segoe UI', Arial, sans-serif;
 }
 
 .tablaMultiplicar thead th {
@@ -107,32 +114,114 @@ main {
 .tablaMultiplicar tbody td {
     padding: 10px 15px;
     text-align: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid #e2e8f0;
     font-size: 16px;
     color: #044caa;
 }
 
 .tablaMultiplicar tbody tr:hover {
-    background: rgba(255, 255, 255, 0.05);
+    background: #f1f5f9;
 }
 
 .tablaMultiplicar tbody tr:last-child td {
     border-bottom: none;
 }
 
-/* Estilo para el título de la tabla */
+/* ============================================
+   TÍTULO DE LA TABLA
+   ============================================ */
 .tabla-titulo {
     text-align: center;
     font-size: 24px;
     font-weight: 700;
-    color: #f8fafc;
+    color: #0f172a;
     margin: 15px 0 10px 0;
-    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
-/* Footer */
+/* ============================================
+   SECCIÓN DE CAJA DE TEXTO
+   ============================================ */
+.input-section {
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 0 30px 20px 30px;
+    border: 1px solid #e2e8f0;
+}
+
+.input-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 8px;
+}
+
+.input-group {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.input-caja {
+    flex: 1;
+    padding: 10px 16px;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #1e293b;
+    font-size: 16px;
+    font-weight: 500;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input-caja::placeholder {
+    color: #94a3b8;
+    font-weight: 400;
+}
+
+.input-caja:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.input-caja:hover {
+    border-color: #94a3b8;
+}
+
+.btn-generar {
+    padding: 10px 24px;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.btn-generar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px -5px rgba(59, 130, 246, 0.4);
+}
+
+.btn-generar:active {
+    transform: scale(0.96);
+}
+
+.input-ayuda {
+    font-size: 12px;
+    color: #64748b;
+    margin-top: 8px;
+    font-style: italic;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
 footer {
     background: #2c3e50;
     color: #bdc3c7;
@@ -141,23 +230,290 @@ footer {
     font-size: 0.95rem;
 }
 
-/* Responsive */
+/* ============================================
+   RESPONSIVE
+   ============================================ */
 @media (max-width: 600px) {
     header h1 {
         font-size: 1.9rem;
     }
+
     main {
         padding: 25px 20px;
     }
-    .tabla-multiplicar th,
-    .tabla-multiplicar td {
-        padding: 14px 8px;
-        font-size: 1rem;
+
+    .input-section {
+        margin: 0 20px 20px 20px;
+        padding: 16px;
+    }
+
+    .tablaMultiplicar th,
+    .tablaMultiplicar td {
+        padding: 10px 8px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .input-section {
+        padding: 16px;
+        margin: 0 16px 16px 16px;
+    }
+
+    .input-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .input-caja {
+        width: 100%;
+        font-size: 15px;
+        padding: 12px 14px;
+    }
+
+    .btn-generar {
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+    }
+
+    .input-label {
+        font-size: 13px;
     }
 }
 
 @media (max-width: 400px) {
     .contenedor {
         border-radius: 16px;
+    }
+
+    .input-section {
+        padding: 12px;
+        margin: 0 12px 12px 12px;
+    }
+
+    .input-caja {
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+
+    .btn-generar {
+        font-size: 13px;
+        padding: 10px;
+    }
+}
+/* ============================================
+   INSTRUCCIONES CLARAS
+   ============================================ */
+
+.instrucciones {
+    background: #f0f7ff;
+    border-left: 4px solid #3b82f6;
+    padding: 16px 20px;
+    margin: 0 30px 20px 30px;
+    border-radius: 8px;
+}
+
+.instruccion-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 4px 0;
+    font-size: 14px;
+    color: #1e293b;
+}
+
+.instruccion-icon {
+    font-size: 18px;
+    min-width: 30px;
+}
+
+.instruccion-texto strong {
+    color: #3b82f6;
+}
+
+
+/* ============================================
+   MENSAJE INICIAL
+   ============================================ */
+
+.mensaje-inicial {
+    text-align: center;
+    padding: 40px 20px;
+    color: #64748b;
+}
+
+.mensaje-icono {
+    font-size: 48px;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.mensaje-inicial h3 {
+    font-size: 22px;
+    color: #1e293b;
+    margin-bottom: 6px;
+}
+
+.mensaje-inicial p {
+    font-size: 16px;
+    margin: 4px 0;
+}
+
+.mensaje-ejemplo {
+    font-size: 14px;
+    color: #94a3b8;
+    margin-top: 8px !important;
+}
+
+.mensaje-ejemplo strong {
+    color: #3b82f6;
+    background: #eff6ff;
+    padding: 2px 10px;
+    border-radius: 4px;
+}
+
+/* ============================================
+   RESPONSIVE - INSTRUCCIONES
+   ============================================ */
+
+@media (max-width: 600px) {
+    .instrucciones {
+        margin: 0 20px 16px 20px;
+        padding: 14px 16px;
+    }
+
+    .instruccion-item {
+        font-size: 13px;
+        padding: 3px 0;
+    }
+
+    .acciones-rapidas {
+        padding: 0 20px;
+    }
+
+    .btn-probar {
+        padding: 10px 28px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .instrucciones {
+        margin: 0 16px 14px 16px;
+        padding: 12px 14px;
+        border-left-width: 3px;
+    }
+
+    .instruccion-item {
+        font-size: 12px;
+        gap: 8px;
+    }
+
+    .instruccion-icon {
+        font-size: 15px;
+        min-width: 24px;
+    }
+
+    .mensaje-inicial {
+        padding: 30px 16px;
+    }
+
+    .mensaje-inicial h3 {
+        font-size: 19px;
+    }
+
+    .mensaje-inicial p {
+        font-size: 14px;
+    }
+
+    .btn-probar {
+        padding: 10px 20px;
+        font-size: 0.85rem;
+        width: 100%;
+    }
+}
+
+@media (max-width: 360px) {
+    .instrucciones {
+        margin: 0 12px 12px 12px;
+        padding: 10px 12px;
+    }
+
+    .instruccion-item {
+        font-size: 11px;
+    }
+
+    .mensaje-ejemplo {
+        font-size: 12px;
+    }
+}
+/* ============================================
+   BOTÓN LIMPIAR TABLA
+   ============================================ */
+
+.accion-extra {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 20px;
+    padding: 12px 0 4px 0;
+    border-top: 1px solid #e2e8f0;
+    flex-wrap: wrap;
+}
+
+.btn-limpiar {
+    background: #f1f5f9;
+    color: #475569;
+    border: 1.5px solid #e2e8f0;
+    padding: 8px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-limpiar:hover {
+    background: #fee2e2;
+    border-color: #fca5a5;
+    color: #dc2626;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.15);
+}
+
+.btn-limpiar:active {
+    transform: scale(0.96);
+}
+
+.texto-ayuda {
+    font-size: 13px;
+    color: #94a3b8;
+    font-style: italic;
+}
+
+/* ============================================
+   RESPONSIVE - BOTÓN LIMPIAR
+   ============================================ */
+
+@media (max-width: 480px) {
+    .accion-extra {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-limpiar {
+        width: 100%;
+        justify-content: center;
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .texto-ayuda {
+        font-size: 12px;
     }
 }
