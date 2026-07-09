@@ -14,34 +14,16 @@
             <img src="icono.png" alt="Logo DevBylin">
             <h1>Tabla de Multiplicar del 3</h1>
             <p class="subtitle">Aprende y practica la tabla del 3 de forma interactiva</p>
-            <button class="btn-probar" onclick="generarTablas()">PROBAR</button>
+            <div class="botones">
+                <button class="btn-probar" onclick="generarTablas(5)">Tabla del 5</button>
+            </div> 
         </header>
 
 <!-- Contenido Principal -->
         <main>
-            <table id="contenedorTabla" class="tablaMultiplicar">
-                <thead>
-                    <tr>
-                        <th>Multiplicando</th>
-                        <th>×</th>
-                        <th>Multiplicador</th>
-                        <th>=</th>
-                        <th>Resultado</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>3</td><td>×</td><td>1</td><td>=</td><td>3</td></tr>
-                    <tr><td>3</td><td>×</td><td>2</td><td>=</td><td>6</td></tr>
-                    <tr><td>3</td><td>×</td><td>3</td><td>=</td><td>9</td></tr>
-                    <tr><td>3</td><td>×</td><td>4</td><td>=</td><td>12</td></tr>
-                    <tr><td>3</td><td>×</td><td>5</td><td>=</td><td>15</td></tr>
-                    <tr><td>3</td><td>×</td><td>6</td><td>=</td><td>18</td></tr>
-                    <tr><td>3</td><td>×</td><td>7</td><td>=</td><td>21</td></tr>
-                    <tr><td>3</td><td>×</td><td>8</td><td>=</td><td>24</td></tr>
-                    <tr><td>3</td><td>×</td><td>9</td><td>=</td><td>27</td></tr>
-                    <tr><td>3</td><td>×</td><td>10</td><td>=</td><td>30</td></tr>
-                </tbody>
-            </table>
+            <div id="contenedorTabla">
+            <p class="mensaje inicial">Selecciona una tabla para verla</p>
+            </div>
         </main>
 
         <!-- Footer -->

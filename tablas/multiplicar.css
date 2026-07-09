@@ -56,7 +56,7 @@ header h1 {
 .btn-probar {
     margin: 20px auto;
     display: block;
-    background: #2c3e50;
+    background: #e18b0b;
     color: white;
     border: none;
     padding: 14px 45px;
@@ -79,35 +79,57 @@ main {
     padding: 35px 30px;
 }
 
-.tabla-multiplicar {
+/* ============================================
+   ESTILOS PARA LA TABLA DINÁMICA
+   ============================================ */
+
+.tablaMultiplicar {
     width: 100%;
     border-collapse: collapse;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.03);
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    margin-top: 15px;
+    font-family: 'Segoe UI', Arial, sans-serif;
 }
 
-.tabla-multiplicar th {
-    background: #FF6B35;
-    color: white;
-    padding: 18px 12px;
-    font-size: 1.1rem;
+.tablaMultiplicar thead th {
+    background: #334155;
+    color: #f8fafc;
+    padding: 12px 15px;
+    font-size: 14px;
     text-transform: uppercase;
-    letter-spacing: 0.8px;
-}
-
-.tabla-multiplicar td {
-    padding: 16px 12px;
+    letter-spacing: 1px;
+    font-weight: 700;
     text-align: center;
-    border-bottom: 1px solid #f0f0f0;
-    font-size: 1.15rem;
-    transition: all 0.3s;
 }
 
-.tabla-multiplicar tr:hover td {
-    background: #fff3e0;
-    transform: scale(1.02);
+.tablaMultiplicar tbody td {
+    padding: 10px 15px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 16px;
+    color: #044caa;
+}
+
+.tablaMultiplicar tbody tr:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.tablaMultiplicar tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Estilo para el título de la tabla */
+.tabla-titulo {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: #f8fafc;
+    margin: 15px 0 10px 0;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* Footer */
